@@ -22,3 +22,9 @@
 [submodule "gaspar"]
 	path = gaspar
 	url = https://github.com/randomicecube/aoc-2022
+[submodule "salgueiro"]
+	path = salgueiro
+	url = https://github.com/franciscoBSalgueiro/AdventOfCode
+[submodule "gongas"]
+	path = gongas
+	url = https://github.com/vugonz/aoc-dumb
