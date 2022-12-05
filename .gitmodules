@@ -1,0 +1,24 @@
+[submodule "srgesus"]
+	path = srgesus
+	url = https://github.com/SrGesus/AdventofCode
+[submodule "abread"]
+	path = abread
+	url = https://github.com/abread/AdventOfCode2022/
+[submodule "borges"]
+	path = borges
+	url = https://github.com/RageKnify/advent_of_code
+[submodule "correia"]
+	path = correia
+	url = https://github.com/diogotcorreia/advent-of-code
+[submodule "dacops"]
+	path = dacops
+	url = https://github.com/Dacops/AoC/
+[submodule "rso"]
+	path = rso
+	url = https://github.com/RafDevX/advent-of-code
+[submodule "espadeiro"]
+	path = espadeiro
+	url = https://github.com/EdSwordsmith/adventofcode
+[submodule "gaspar"]
+	path = gaspar
+	url = https://github.com/randomicecube/aoc-2022
