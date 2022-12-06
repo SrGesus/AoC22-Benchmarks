@@ -28,3 +28,6 @@
 [submodule "gongas"]
 	path = gongas
 	url = https://github.com/vugonz/aoc-dumb
+[submodule "david"]
+	path = david
+	url = https://github.com/DavidAkaFunky/AdventOfCode2022

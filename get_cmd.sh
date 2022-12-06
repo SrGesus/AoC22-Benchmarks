@@ -67,4 +67,9 @@ salgueiro)
     ln -s $PWD/inputs/$2.txt $PWD/salgueiro/2022/$(printf 'day%02d' $2)/input.txt
     echo cd $PWD/salgueiro/2022/$(printf 'day%02d' $2)/ "&&" julia $(printf 'day%02d.jl' $2)
 ;;
+david)
+    rm $PWD/david/$(prints 'day%02d' $2)/input.txt
+    ln -s $PWD/inputs/$2.txt $PWD/david/$(prints 'day%02d' $2)/input.txt
+    echo python $PWD/david/$(prints 'day%02d' $2)/$(prints 'day%02d' $2).py
+;;
 esac
