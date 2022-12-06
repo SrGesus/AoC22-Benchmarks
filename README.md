@@ -11,7 +11,7 @@ make
 ```
 Afterwards, you can run the benchmark of each day by running:
 ```bash
-make run01
+make run1
 ```
 
 
@@ -20,6 +20,7 @@ These are the main requirements for the benchmarks to run:
 * git
 * cargo
 * hyperfine
+* julia
 
 # Repositories Benchmarked
 This is an attempt to benchmark the following repositories:

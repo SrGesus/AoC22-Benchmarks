@@ -23,7 +23,14 @@ dacops)
     echo cd $PWD/dacops/AoC_22/Day_$2 "&&" cat $PWD/inputs/$2.txt "|" ./day$2-2
 ;;
 espadeiro)
-    echo cd $PWD/espadeiro/aoc2022/$(printf 'day%02d' $2) "&&" cat $PWD/inputs/$2.txt "|" cargo run --release
+    case $2 in
+        1 | 2 | 3 | 4)
+        echo cd $PWD/espadeiro/aoc2022/$(printf 'day%02d' $2) "&&" cat $PWD/inputs/$2.txt "|" cargo run --release
+        ;;
+        *)
+        echo cd $PWD/espadeiro/aoc2022/$(printf 'day%02d' $2) "&&" cargo run --release $PWD/inputs/$2.txt
+        ;;
+    esac
 ;;
 rso)
     rm $PWD/rso/2022/inputs/$(printf 'day%02d.txt' $2)
@@ -46,13 +53,18 @@ gaspar)
         echo cd $PWD/gaspar/day-$2/ "&&" ./exec
     ;;
     *)
-        cd $PWD/gaspar/day-$2/ex-2
-        g++ aoc-$2.cpp -o exec
-        rm aoc-$2-input.txt
-        ln -s $ROOT_DIR/inputs/$2.txt aoc-$2-input.txt
+        cd $PWD/gaspar/day-$2/
+        make -s
+        rm resources/aoc-$2-input.txt
+        ln -s $ROOT_DIR/inputs/$2.txt resources/aoc-$2-input.txt
         cd $ROOT_DIR
-        echo cd $PWD/gaspar/day-$2/ex-2 "&&" ./exec
+        echo cd $PWD/gaspar/day-$2/ "&&" ./ex-2/aoc-5
     ;;
     esac
+;;
+salgueiro)
+    rm $PWD/salgueiro/2022/$(printf 'day%02d' $2)/input.txt
+    ln -s $PWD/inputs/$2.txt $PWD/salgueiro/2022/$(printf 'day%02d' $2)/input.txt
+    echo cd $PWD/salgueiro/2022/$(printf 'day%02d' $2)/ "&&" julia $(printf 'day%02d.jl' $2)
 ;;
 esac

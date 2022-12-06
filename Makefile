@@ -8,8 +8,8 @@ clean:
 update: clean
 	git submodule update --remote
 
-run1: make
-	hyperfine --warmup 3 --runs 100 \
+run1: 
+	hyperfine --warmup 1 --runs 100 \
 		'$(shell ./get_cmd.sh abread 1)' \
 		'$(shell ./get_cmd.sh borges 1)' \
 		'$(shell ./get_cmd.sh correia 1)' \
@@ -20,8 +20,8 @@ run1: make
 		# '$(shell ./get_cmd.sh dacops 1)'
 
 
-run4: make
-	hyperfine --runs 1 \
+run4: 
+	hyperfine -warmup 1 --runs 10 \
 		'$(shell ./get_cmd.sh abread 4)' \
 		'$(shell ./get_cmd.sh borges 4)' \
 		'$(shell ./get_cmd.sh correia 4)' \
@@ -31,9 +31,12 @@ run4: make
 		'$(shell ./get_cmd.sh gaspar 4)' \
 		'$(shell ./get_cmd.sh dacops 4)'
 
-run5: make
-	hyperfine --warmup 3 --runs 1 \
+run5: 
+	hyperfine --warmup 1 --runs 10 \
 		'$(shell ./get_cmd.sh borges 5)' \
 		'$(shell ./get_cmd.sh correia 5)' \
 		'$(shell ./get_cmd.sh rso 5)' \
+		'$(shell ./get_cmd.sh espadeiro 5)' \
 		'$(shell ./get_cmd.sh srgesus 5)' \
+		'$(shell ./get_cmd.sh gaspar 5)' \
+		'$(shell ./get_cmd.sh salgueiro 5)'
