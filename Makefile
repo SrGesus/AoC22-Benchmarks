@@ -1,6 +1,6 @@
 
 make:
-	git submodule update --init --remote
+	git submodule update --init
 
 clean:
 	rm -rf abread borges correia dacops espadeiro gaspar gongas rso salgueiro srgesus david
