@@ -67,3 +67,13 @@ run8:
 		'$(shell ./get_cmd.sh rso 8)' \
 		'$(shell ./get_cmd.sh salgueiro 8)' \
 		'$(shell ./get_cmd.sh srgesus 8)' \
+
+run9:
+	hyperfine --warmup 3 --runs 1000 \
+		'$(shell ./get_cmd.sh abread 9)' \
+		'$(shell ./get_cmd.sh borges 9)' \
+		'$(shell ./get_cmd.sh correia 9)' \
+		'$(shell ./get_cmd.sh gaspar 9)' \
+		'$(shell ./get_cmd.sh rso 9)' \
+		'$(shell ./get_cmd.sh salgueiro 9)' \
+		'$(shell ./get_cmd.sh srgesus 9)' \
